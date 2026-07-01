@@ -5,7 +5,7 @@ Screen Recapture Detection is a lightweight computer vision application that cla
 The application includes a complete end-to-end pipeline for dataset creation, feature extraction, model training, hyperparameter optimization, performance evaluation, and real-time inference through both a command-line interface and an interactive Flask web application.The system delivers low-latency predictions while maintaining an interpretable machine learning workflow.
 
 <p align="left">
-<img src="assets/imageemo.png" width="900">
+<img src="assets/image.png" width="900">
 </p>
 
 ## 🎯 Motivation
@@ -92,9 +92,6 @@ To ensure the classifier learned **recapture-specific visual artifacts** rather 
 <img src="assets/pipeline.png" width="1000">
 </p>
 
-The proposed system follows a lightweight computer vision pipeline that transforms an input image into a prediction through handcrafted feature extraction and machine learning. Each image undergoes preprocessing before extracting a set of discriminative visual features, which are then used by a trained Random Forest classifier to determine whether the image is a genuine photograph or a screen recapture.  
-
-
 ### Why Handcrafted Features?
 
 Instead of relying on deep learning, this project adopts a handcrafted feature-based approach tailored to the available dataset size and deployment requirements. The extracted features capture image quality, texture, color distribution, gradient information, and frequency-domain characteristics that are commonly affected during the screen recapture process.
@@ -174,22 +171,26 @@ The optimized model is serialized as **`model_train/best_random_forest.pkl`** an
 | Average Inference Time/CPU | **67.01 ms/image** |
 | Throughput | **14.92 images/second** |
 
+
 <table align="center">
-  <tr>
+<tr>
 
-    <td align="center">
-      <img src="assets/feature_importance.png" alt="Feature Importance" width="650"/>
-      <br>
-      <b>Feature Importance</b>
-    </td>
+<td align="center">
+<img src="assets/feature_importance.png" width="650">
 
-    <td align="center">
-      <img src="assets/confusion_matrix.png" alt="Confusion Matrix" width="420"/>
-      <br>
-      <b>Confusion Matrix</b>
-    </td>
-  
-  </tr>
+<b>Feature Importance</b>
+
+</td>
+
+<td align="center">
+
+<img src="assets/confusion_matrix.png" width="420">
+
+<b>Confusion Matrix</b>
+
+</td>
+
+</tr>
 </table>
 
 
@@ -197,7 +198,7 @@ The optimized model is serialized as **`model_train/best_random_forest.pkl`** an
  
 **1. Install dependencies**
 ```bash
-pip install opencv-python numpy pandas scikit-learn scikit-image scipy matplotlib joblib flask
+pip install -r requirements.txt
 ```
  
 **2. Run prediction on a single image**
@@ -233,4 +234,4 @@ python latency.py               # benchmark inference speed
 
 ## 👩‍💻 Author
  
-**Anshika Agrawal**
+## Anshika Agrawal
