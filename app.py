@@ -608,6 +608,11 @@ HTML = """
       result.style.display = 'none';
     }
   </script>
+
+  <p style="margin-top: 28px; font-size: 0.75rem; color: #444; text-align: center; letter-spacing: 0.3px;">
+  A project built for <strong style="color: #666;">SalesCode AI</strong> &nbsp;·&nbsp; Anshika Agrawal
+</p>
+
 </body>
 </html>
 """
