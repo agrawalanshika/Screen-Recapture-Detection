@@ -8,11 +8,15 @@ The application includes a complete end-to-end pipeline for dataset creation, fe
 <img src="assets/image.png" width="900">
 </p>
 
+<br>
+
 ## 🎯 Motivation
 
 Digital verification systems increasingly depend on photographs submitted by users to verify identity, authenticate products, validate documents, or confirm physical presence. However, these systems remain vulnerable to screen recapture attacks, where an attacker photographs an image displayed on a phone, tablet, or computer monitor instead of capturing the original scene.
 
 Since the semantic content of both images may be identical, conventional object recognition techniques are insufficient for detecting this type of fraud. 
+
+<br>
 
 
 ## ✨ Features
@@ -27,6 +31,8 @@ Since the semantic content of both images may be identical, conventional object 
 - 📦 Lightweight and portable deployment suitable for resource-constrained environments
 
 
+<br>
+
 ## 🛠️ Tech Stack
 
 | Category | Technology |
@@ -39,6 +45,8 @@ Since the semantic content of both images may be identical, conventional object 
 | Data Visualization | Matplotlib |
 | Web Framework | Flask |
 | Model Serialization | Joblib |
+
+<br>
 
 
 ## 📂 Project Structure
@@ -74,6 +82,7 @@ Screen-Recapture-Detection/
 │
 └── README.md
 ```
+<br>
 
 
 ## 📊 Dataset
@@ -85,6 +94,7 @@ The model was trained and evaluated on a self-collected dataset consisting of **
 
 To ensure the classifier learned **recapture-specific visual artifacts** rather than differences in scene content, the same or similar underlying scenes were intentionally used for both classes. This encourages the model to focus on characteristics such as **moiré patterns, pixel-grid textures, glare, color distortions, and frequency-domain artifacts**, which are commonly introduced during the screen recapture process.
 
+<br>
 
 ## ⚙️ Methodology
 
@@ -98,7 +108,7 @@ Instead of relying on deep learning, this project adopts a handcrafted feature-b
 
 This approach offers several advantages, including low computational overhead, fast inference, interpretable feature importance, and reduced risk of overfitting on a relatively small self-collected dataset. As a result, the system remains lightweight, explainable, and well suited for real-time deployment on resource-constrained devices.
 
-
+<br>
 
 
 ## 🧠 Feature Extraction
@@ -136,6 +146,8 @@ These handcrafted features capture variations in image quality, texture, color d
 
 All feature extraction logic is implemented in `features.py` and is consistently reused during dataset generation, model training, and inference, ensuring identical feature computation throughout the pipeline.
 
+<br>
+
 ## 🤖 Model
 
 To identify the most suitable classifier for screen recapture detection, multiple machine learning algorithms were trained and evaluated using the same handcrafted feature set. The models were compared based on their classification accuracy, robustness, inference efficiency, and interpretability.
@@ -162,6 +174,8 @@ To identify the most suitable classifier for screen recapture detection, multipl
 | `min_samples_leaf` | 1 |
 
 The optimized model is serialized as **`model_train/best_random_forest.pkl`** and is shared across both the command-line prediction pipeline (`predict.py`) and the Flask web application (`app.py`), ensuring a consistent inference workflow across all deployment interfaces.
+
+<br>
 
 ## 📈 Results
 
@@ -193,6 +207,7 @@ The optimized model is serialized as **`model_train/best_random_forest.pkl`** an
 </tr>
 </table>
 
+<br>
 
 ## 🚀 How to Run
  
@@ -223,6 +238,8 @@ python model_train/model_training.py   # grid search + train → best_random_for
 python latency.py               # benchmark inference speed
 ```
 
+<br>
+
 ## 📌 Future Improvements
 
 - Expand the dataset with a larger and more diverse collection of images captured across different smartphones, displays, lighting conditions, and viewing angles to improve model generalization.
@@ -231,7 +248,8 @@ python latency.py               # benchmark inference speed
 - Optimize the inference pipeline for deployment on edge devices using model compression techniques such as **ONNX** or **TensorFlow Lite**.
 - Deploy the Flask web application to a cloud platform (e.g., Render or Railway) to enable public access and real-time demonstration.
 
+<br>
 
 ## 👩‍💻 Author
  
-## Anshika Agrawal
+### Anshika Agrawal
