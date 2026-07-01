@@ -210,19 +210,25 @@ The optimized model is serialized as **`model_train/best_random_forest.pkl`** an
 <br>
 
 ## 🚀 How to Run
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/agrawalanshika/Screen-Recapture-Detection.git
+cd Screen-Recapture-Detection
+```
  
-**1. Install dependencies**
+**2. Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
  
-**2. Run prediction on a single image**
+**3. Run prediction on a single image**
 ```bash
 python predict.py path/to/image.jpg
 ```
 Output: a single score from 0 (real) to 1 (screen recapture).
  
-**3. Launch the live web demo**
+**4. Launch the live web demo**
 ```bash
 python app.py
 ```
@@ -231,7 +237,7 @@ Then open **http://localhost:5000** in your browser.
 - Hit **Capture** then **Analyse**, or simply **upload any image**
 - The model runs on the backend and returns a result in milliseconds
  
-**4. (Optional) Rebuild from scratch**
+**5. (Optional) Rebuild from scratch**
 ```bash
 python create_dataset.py        # extract features → features.csv
 python model_train/model_training.py   # grid search + train → best_random_forest.pkl
