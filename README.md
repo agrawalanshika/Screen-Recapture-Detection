@@ -252,7 +252,6 @@ python latency.py               # benchmark inference speed
 - Evaluate lightweight deep learning architectures, such as **MobileNetV2**, and compare their performance with the handcrafted feature-based approach on a larger dataset.
 - Incorporate additional texture and frequency-domain descriptors (e.g., **GLCM**, wavelet-based features) to improve the detection of subtle screen recapture artifacts.
 - Optimize the inference pipeline for deployment on edge devices using model compression techniques such as **ONNX** or **TensorFlow Lite**.
-- Deploy the Flask web application to a cloud platform (e.g., Render or Railway) to enable public access and real-time demonstration.
 
 <br>
 
