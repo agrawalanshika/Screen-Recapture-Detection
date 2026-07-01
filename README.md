@@ -1,6 +1,6 @@
 # 📸 Screen Recapture Detection using Handcrafted Image Features and Random Forest
 
-Screen Recapture Detection is a lightweight computer vision application that classifies an input image as either a **real photograph** or a **screen recapture**. The project combines handcrafted image feature extraction with a Random Forest classifier to perform fast and efficient binary image classification.
+Screen Recapture Detection is a lightweight machine learning application that classifies an input image as either a **real photograph** or a **screen recapture**. The project combines classic Computer Vision with a optimized Random Forest classifier to perform fast and efficient binary image classification.
 
 The application includes a complete end-to-end pipeline for dataset creation, feature extraction, model training, hyperparameter optimization, performance evaluation, and real-time inference through both a command-line interface and an interactive Flask web application.The system delivers low-latency predictions while maintaining an interpretable machine learning workflow.
 
